@@ -69,12 +69,16 @@ Start the frontend development server: npm run dev
 Open your browser and navigate to http://localhost:5173.
 
 👥 Team Members
-Name	Role
-Ayutayam Sutar	[Team Lead, Frontend Dev]
-Ashutosh Nayak	[Backend Dev]
-Ankita Patra  [Backend Dev]
-Siddharth Kumar Jena	[UI/UX Designer]
-Swapnajit Mohapatra [Frontend Dev]
+| Name                     | Role                        |
+| -----------------------  | --------------------------- |
+| **Ayutayam Sutar**       | [Team Lead, Frontend Dev]   |
+| **Ashutosh Nayak**       | [Backend Dev]               |
+| **Siddharth Kumar Jena** | [UI/UX Designer]            |
+| **Ankita Patra**         | [Backend Dev]               |
+| **Swapnajit Mohapatra**  | [Frontend Dev]              |
+
+
+ 
 
 🙏 Acknowledgements
 Tuutedude 2025 Organizers.
