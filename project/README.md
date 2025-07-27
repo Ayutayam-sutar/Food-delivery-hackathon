@@ -1,131 +1,82 @@
-# SurplusX - Street Vendor Trading App
+# VendorLink 🛒  
+A Modern B2B Procurement Platform for Vendors
 
-A real-time marketplace for street food vendors in India to trade surplus ingredients and find needed items nearby.
+🌐 **Live Site**: [https://vendorlink-gold.vercel.app](https://vendorlink-gold.vercel.app)
 
-## 🚀 Features
+## 📖 Overview
 
-- **Phone OTP Authentication** - Secure login via Firebase Auth
-- **Smart Matching** - AI-powered ingredient matching within 3-5km radius
-- **Real-time Chat** - Coordinate pickups and negotiate trades
-- **Interactive Map** - Leaflet.js integration showing nearby vendors
-- **Dynamic Pricing** - AI suggests prices based on perishability, time, and market rates
-- **Voice Input** - Quick listing creation with voice commands
-- **Urgency-based Sorting** - High priority for items expiring soon
 
-## 🛠 Tech Stack
+Welcome to **VendorLink** — a simplified, vendor-first platform that helps businesses seamlessly procure essential raw materials like packaging supplies, groceries, and more.  
+ Whether you're a restaurant owner, small manufacturer, or shopkeeper, VendorLink enables you to browse, select, and order the materials you need — all in a few clicks.
 
-- **Frontend**: Next.js 14+ (App Router), React, Tailwind CSS
-- **Backend**: Firebase (Auth, Firestore)
-- **Maps**: Leaflet.js with OpenStreetMap
-- **AI Features**: Custom pricing algorithms
-- **Icons**: Lucide React
+
+---
+
+
+## ✨ Key Features
+
+### Inventory
+Helps to track down raw materials availability of your store.
+
+### 🛒 Suppliers
+Suppliers Feature transforms traditional B2B procurement by bridging the gap between vendors and nearby verified suppliers.: Reach out instantly via built-in chat, email, or integrated WhatsApp support to negotiate prices or check availability. Live Supplier Ratings: View real-time ratings, delivery reliability scores, and product quality feedback from other vendors before making a deal.
+
+###  Insights 
+Helps to track down the amount spend on raw materials, track down other necessary details 
+
+
+---
+
+## 💻 Tech Stack
+
+- **Frontend**: ReactJS (TSX)
+- **Styling**: Tailwind CSS
+- **Routing**: React Router
 - **Deployment**: Vercel
 
-## 📱 Pages Structure
+---
 
-- `/login` - Phone OTP authentication
-- `/profile` - Vendor onboarding and profile setup
-- `/dashboard` - Main trading interface
-- `/listing/[id]` - Detailed listing view
-- `/chat/[chatId]` - Real-time messaging
-- `/map` - Interactive map with nearby vendors
+## 🛠️ Installation & Setup
 
-## 🔧 Setup Instructions
+To get a local copy up and running, follow these simple steps:
 
-1. **Clone and Install**
-   ```bash
-   npm install
-   ```
+### 🔧 Prerequisites
 
-2. **Firebase Setup**
-   - Create a Firebase project
-   - Enable Authentication (Phone provider)
-   - Create Firestore database
-   - Copy config to `.env.local`
+- Node.js
+- npm
+- Git
 
-3. **Environment Variables**
-   ```
-   NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
-   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=project.firebaseapp.com
-   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
-   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=project.appspot.com
-   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=sender-id
-   NEXT_PUBLIC_FIREBASE_APP_ID=app-id
-   ```
+### 📦 Installation
 
-4. **Run Development Server**
-   ```bash
-   npm run dev
-   ```
+1. Clone the repository:
+  git clone [https://github.com/Ayutayam-sutar/Food-delivery-hackathon](https://github.com/Ayutayam-sutar/Food-delivery-hackathon)
+2. Install frontend dependencies:
+  npm install
 
-## 📊 Database Collections
+---
 
-### Users
-```javascript
-{
-  uid: string,
-  phone: string,
-  vendorName: string,
-  stallName: string,
-  category: string,
-  location: GeoPoint,
-  address: string,
-  createdAt: timestamp
-}
-```
 
-### Listings
-```javascript
-{
-  vendorId: string,
-  itemName: string,
-  quantity: number,
-  unit: string,
-  price: number,
-  type: 'surplus' | 'need',
-  perishability: 'low' | 'medium' | 'high',
-  expiryHours: number,
-  location: GeoPoint,
-  status: 'active' | 'claimed' | 'completed',
-  createdAt: timestamp
-}
-```
+### Deployed link 
 
-### Chats
-```javascript
-{
-  participants: [uid1, uid2],
-  listingId: string,
-  listingTitle: string,
-  lastMessage: string,
-  lastMessageAt: timestamp,
-  messages: subcollection
-}
-```
+🌐 **Live Site**: [https://vendorlink-gold.vercel.app](https://vendorlink-gold.vercel.app)
 
-## 🤖 AI Functions
 
-- **getSuggestedPrice()** - Dynamic pricing based on time, perishability, quantity
-- **calculateUrgency()** - Urgency levels based on expiry time
-- **calculateDistance()** - Haversine formula for geo-distance
+----
 
-## 🚀 Deployment
+### Running the Application
+Start the frontend development server: npm run dev
 
-Deploy to Vercel with automatic CI/CD:
+Open your browser and navigate to http://localhost:5173.
 
-```bash
-npm run build
-```
+👥 Team Members
+Name	Role
+Ayutayam Sutar	[Team Lead, Frontend Dev]
+Ashutosh Nayak	[Backend Dev]
+Ankita Patra  [Backend Dev]
+Siddharth Kumar Jena	[UI/UX Designer]
+Swapnajit Mohapatra [Frontend Dev]
 
-The app is optimized for mobile-first usage with PWA capabilities.
+🙏 Acknowledgements
+Tuutedude 2025 Organizers.
+Claude, Gemini, bolt , chatgpt , vercel , youtube 
 
-## 🔒 Security Features
-
-- Phone number verification
-- Firestore security rules
-- Location-based access control
-- Real-time data validation
-
-## 📄 License
-
-MIT License - feel free to use for commercial purposes.
